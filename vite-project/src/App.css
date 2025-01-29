@@ -1,0 +1,207 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 auto;
+  text-align: left;
+}
+
+.logo {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 2em;
+  padding: 1.5em;
+}
+/* .logo:hover {
+  filter: drop-shadow(0 0 2em #ffecd1);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #ffecd1);
+} */
+.header {
+  display: flex;
+  align-items: left;
+  gap: 10px;
+}
+/* BELOW IS LOGIN/redirect links */
+.right-corner {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  align-items: center; /* Align text and button vertically */
+  gap: 30px; /* Space between text and button */
+}
+
+.right-text {
+  font-size: 16px;
+  color: #246a73ff; 
+  font-weight: bold;
+}
+/* .right-text text:hover {
+
+} */
+
+.login-container {
+  display: flex;
+  align-items: center;
+}
+
+.login-container button {
+  position: absolute;
+  top: 30px; /* Distance from the top */
+  right: 30px; /* Distance from the right */
+  display: flex;
+  gap: 15px; /* Space between links */
+  background-color: #368f8bff; /* Slightly transparent background */
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.login-container a{
+  text-decoration: none;
+  color: #f3dfc1ff;
+  font-weight: bold;
+}
+
+.login-container button:hover {
+  color: #ddbea8ff;
+}
+
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+.container {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: left; /* Center everything horizontally */
+  text-align: left;
+  width: 75vw;
+  height: fit-content;
+  margin-left: 8%;
+  margin-right: 5%;
+  margin-top: 10%;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #f3dfc1ff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.graph {
+  width: 90%; /* Adjust width as needed */
+  height: 300px; /* Adjust height as needed */
+  padding: 20px; /* Inner spacing */
+  margin-top: 3%;
+  margin-left: 3%;
+  border-left: 3px transparent #160f29ff;  /* Left border visible */
+  border-bottom: 3px transparent #160f29ff; /* Bottom border visible */
+  border-right: none; /* Hide right border */
+  border-top: none;  /* Hide top border */
+  align-self: center; /* Ensures the rectangle is centered */
+  background-color: #f3e9d2;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  display: flex; /* Flexbox for arranging the bars */
+  justify-content: space-evenly; /* Space bars evenly within the graph */
+  align-items: flex-end; /* Align bars to the bottom of the container */
+}
+
+.bar {
+  width: 20%; /* Adjust the width of each bar */
+  background-color: #246a73ff; /* Bar color */
+  margin: 0 10px; /* Space between bars */
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out; /* Optional animation when changing values */
+}
+.checklist {
+  margin-top: 20px; /* Space between graph and checklist */
+  width: 100%; /* Full width of container */
+}
+
+.checklist ul {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0;
+}
+
+.checklist .task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  background-color: #f3e9d2;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  margin-left: 15%;
+  width: 70%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.checklist .task-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.checklist .task-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.checklist .task-price {
+  font-size: 22px;
+  font-weight: bold;
+  color: #246a73ff;
+  margin-top: 5px;
+}
+
+.checklist .task-caption {
+  font-size: 14px;
+  color: #777;
+  margin-top: 5px;
+}
+
+.checklist .pay-now {
+  background-color: #368f8bff;
+  color: #f3dfc1ff;
+  border: none;
+  padding: 8px 40px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.checklist .pay-now:hover {
+  color: #ddbea8ff; /* Change text color on hover */
+}
+
+
+/* colors (light):
+--dark-purple: #160f29ff;
+--caribbean-current: #246a73ff;
+--dark-cyan: #368f8bff;
+--champagne: #f3dfc1ff;
+--desert-sand: #ddbea8ff;
+*/ 
