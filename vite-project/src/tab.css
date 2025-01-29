@@ -1,0 +1,69 @@
+/* Tab Container on the left */
+.tab-container {
+    display: flex;
+    flex-direction: column; /* Stack tabs vertically */
+    align-items: flex-start;
+    position: absolute; /* Position the tabs outside of the container */
+    left: -200px; /* Move the tabs slightly outside of the container */
+    top:200px; /* Adjust top spacing */
+    padding-right: 20px; /* Add spacing on the right side */
+  }
+  
+  /* Styling individual tabs */
+  .tab {
+    padding: 10px ;
+    margin-bottom: 5px;
+    margin-top: 5%;
+    border-radius: 10px;
+    background-color: #f3dfc1ff;  /* Same as container for unselected tab */
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, width 0.3s ease; /* Added transform for smooth effect */
+    width: 200px; /* Define width for uniformity */
+    z-index: 1; /* Set z-index to ensure tabs stay in front */
+  }
+  
+  .tab.selected {
+    background-color: #f3dfc1ff; /* Same as container */
+    transform: translateX(15px); /* Move the selected tab outwards */
+    width: 200px; /* Make the selected tab bigger */
+    z-index: 2; /* Bring selected tab in front of unselected one */
+  }
+  
+  .tab.unselected {
+    background-color: #c5a38b;  /* Darker background for unselected tab */
+    width: 180px; /* Make the unselected tab smaller */
+    transform: translateX(0); /* Do not move unselected tab */
+    z-index: 0; /* Place the unselected tab behind the container */
+  }
+  
+  .tab:hover {
+    background-color: #d1b198;  /* Light hover effect for tabs */
+  }
+  
+  /* Content inside the container */
+  .tab-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 180px; /* Ensure content is not covered by the tab container */
+    padding-left: 20px; /* Add padding to the content */
+  }
+  
+  /* Additional styling for container */
+  .container {
+    position: relative; /* Ensure that tab container can be positioned relative to this container */
+    display: flex;
+    flex-direction: column;
+    width: 75vw;
+    height: fit-content;
+    margin-left: 8%;
+    margin-right: 5%;
+    margin-top: 10%;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #f3dfc1ff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  

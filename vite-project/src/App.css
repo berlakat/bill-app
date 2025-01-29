@@ -112,7 +112,7 @@
   height: 300px; /* Adjust height as needed */
   padding: 20px; /* Inner spacing */
   margin-top: 3%;
-  margin-left: 3%;
+  margin-left: 3%; 
   border-left: 3px transparent #160f29ff;  /* Left border visible */
   border-bottom: 3px transparent #160f29ff; /* Bottom border visible */
   border-right: none; /* Hide right border */
@@ -127,7 +127,7 @@
 }
 
 .bar {
-  width: 20%; /* Adjust the width of each bar */
+  width: 15%; /* Adjust the width of each bar */
   background-color: #246a73ff; /* Bar color */
   margin: 0 10px; /* Space between bars */
   border-radius: 10px;
@@ -153,7 +153,7 @@
   border-radius: 8px;
   margin-bottom: 20px;
   margin-left: 15%;
-  width: 70%;
+  width: 80%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 

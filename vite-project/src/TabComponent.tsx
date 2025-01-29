@@ -1,29 +1,38 @@
-import { useState } from 'react'
-import b from './assets/bills.svg'
-import './App.css'
-import TabComponent from './tabComponent.tsx';
+import { useState } from 'react';
+import './tab.css';
+import './App.css';
 
-function App() {
-  const [count, setCount] = useState(0)
+const TabComponent: React.FC = () => {
+  const [selectedTab, setSelectedTab] = useState('tab1'); // Track the selected tab
+
+  // Function to change the selected tab
+  const handleTabClick = (tab: string) => {
+    setSelectedTab(tab); // Update selected tab
+  };
 
   return (
-    <>
-      <div className="right-corner">
-        <span className="right-text">Home</span><span className="right-text">Help</span><span className="right-text">Profile</span>
-        <div className="login-button">
-          <button>Log-in</button>
+    <div className="container">
+      <div className="tab-container">
+        <div
+          className={`tab ${selectedTab === 'tab1' ? 'selected' : 'unselected'}`}
+          id="tab1"
+          onClick={() => handleTabClick('tab1')} // Use the function here
+        >
+          Tab 1
+        </div>
+        <div
+          className={`tab ${selectedTab === 'tab2' ? 'selected' : 'unselected'}`}
+          id="tab2"
+          onClick={() => handleTabClick('tab2')} // Use the function here
+        >
+          Tab 2
         </div>
       </div>
-      <div className="header">
-        <div className="logo">
-          <a href="b"><img src={b} alt="logo"/><h1>billify</h1></a><br />
-          Due now <br /> Paid
-                  </div>
-      </div>
-       {/* Use the TabComponent here */}
-       <TabComponent />
 
-      <div className="container">
+      <div className="tab-content">
+        {/* Conditionally render tab content based on the selectedTab state */}
+        {selectedTab === 'tab1' && (
+          <div id="tab1Content">
         <h2>Welcome to your portal! <br /> 
 
         <div className="graph">
@@ -74,29 +83,15 @@ function App() {
           </ul>
         </div>
       </div>
-
-
-      {/* <h1>illify</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+        )}
+        {selectedTab === 'tab2' && (
+          <div id="tab2Content">
+            <p>Content for Tab 2</p>
+          </div>
+        )}
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p> */}
-    </>
-  )
-}
+    </div>
+  );
+};
 
-export default App
-/* colors (light):
---dark-purple: #160f29ff;
---caribbean-current: #246a73ff;
---dark-cyan: #368f8bff;
---champagne: #f3dfc1ff;
---desert-sand: #ddbea8ff;
-*/
+export default TabComponent;
