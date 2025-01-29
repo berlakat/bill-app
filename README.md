@@ -1,9 +1,7 @@
 # 463
 
-icons: https://heroicons.com/solid
-#
-colors:
-#
+icons: https://heroicons.com/solid        
+colors:      
 /* colors (light):
 --dark-purple: #160f29ff;
 --caribbean-current: #246a73ff;
