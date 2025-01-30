@@ -21,7 +21,7 @@
 .header {
   display: flex;
   align-items: left;
-  gap: 10px;
+  gap: 0px;
 }
 /* BELOW IS LOGIN/redirect links */
 .right-corner {
@@ -31,6 +31,7 @@
   display: flex;
   align-items: center; /* Align text and button vertically */
   gap: 30px; /* Space between text and button */
+  z-index: 2;
 }
 
 .right-text {
@@ -38,9 +39,10 @@
   color: #246a73ff; 
   font-weight: bold;
 }
-/* .right-text text:hover {
-
-} */
+.right-text:hover {
+  color: #94d2bdff;
+  cursor: pointer;
+} 
 
 .login-container {
   display: flex;
@@ -60,50 +62,29 @@
 }
 .login-container a{
   text-decoration: none;
-  color: #f3dfc1ff;
+  color: #f3dfc1ff ;
   font-weight: bold;
 }
 
 .login-container button:hover {
-  color: #ddbea8ff;
+  /* color: #001219ff; */
+  background-color: #94d2bdff;
 }
 
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
 .container {
   display: flex;
-  flex-direction: column; /* Stack children vertically */
+  min-width: 800px;
+  flex-direction: row; /* Stack children vertically */
   align-items: left; /* Center everything horizontally */
   text-align: left;
   width: 75vw;
   height: fit-content;
-  margin-left: 8%;
+  margin-left: 40px;
   margin-right: 5%;
   margin-top: 10%;
   padding: 20px;
   border-radius: 20px;
-  background-color: #f3dfc1ff;
+  background-color: #f3dfc1ff ;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -112,9 +93,9 @@
   height: 300px; /* Adjust height as needed */
   padding: 20px; /* Inner spacing */
   margin-top: 3%;
-  margin-left: 3%; 
-  border-left: 3px transparent #160f29ff;  /* Left border visible */
-  border-bottom: 3px transparent #160f29ff; /* Bottom border visible */
+  margin-left: 8%; 
+  border-left: 3px solid #160f29ff;  /* Left border visible */
+  border-bottom: 3px solid #160f29ff; /* Bottom border visible */
   border-right: none; /* Hide right border */
   border-top: none;  /* Hide top border */
   align-self: center; /* Ensures the rectangle is centered */
@@ -127,15 +108,31 @@
 }
 
 .bar {
-  width: 15%; /* Adjust the width of each bar */
-  background-color: #246a73ff; /* Bar color */
+  width: 20%; /* Adjust the width of each bar */
+  background-color: #ee9b00ff; /* Bar color */
   margin: 0 10px; /* Space between bars */
   border-radius: 10px;
   transition: transform 0.3s ease-in-out; /* Optional animation when changing values */
 }
+.bar:hover {
+  background-color: #ca6702ff;
+}
+.bar-label {
+  position: flex;
+  margin-left: 5px;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.bar:hover .bar-label {
+  opacity: 1;
+}
 .checklist {
+  margin-left: 10%;
   margin-top: 20px; /* Space between graph and checklist */
-  width: 100%; /* Full width of container */
+  width: 120%; /* Full width of container */
 }
 
 .checklist ul {
@@ -148,14 +145,14 @@
   justify-content: space-between;
   align-items: center;
   padding: 30px;
-  background-color: #f3e9d2;
+  /* background-color: #f3e9d2;
   border: 1px solid #ddd;
   border-radius: 8px;
   margin-bottom: 20px;
   margin-left: 15%;
   width: 80%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);*/
+} 
 
 .checklist .task-content {
   display: flex;
@@ -163,7 +160,7 @@
 }
 
 .checklist .task-name {
-  font-size: 18px;
+  font-size: 30px;
   font-weight: bold;
   color: #333;
 }
@@ -171,7 +168,7 @@
 .checklist .task-price {
   font-size: 22px;
   font-weight: bold;
-  color: #246a73ff;
+  color: #005f73ff;
   margin-top: 5px;
 }
 
@@ -182,19 +179,19 @@
 }
 
 .checklist .pay-now {
-  background-color: #368f8bff;
-  color: #f3dfc1ff;
+  background-color: #0a9396ff;
+  color: #f3dfc1ff ;
   border: none;
   padding: 8px 40px;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 24px;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .checklist .pay-now:hover {
-  color: #ddbea8ff; /* Change text color on hover */
+  color: #001219ff; /* Change text color on hover */
 }
 
 
@@ -202,6 +199,17 @@
 --dark-purple: #160f29ff;
 --caribbean-current: #246a73ff;
 --dark-cyan: #368f8bff;
---champagne: #f3dfc1ff;
+--champagne: #f3dfc1ff ;
 --desert-sand: #ddbea8ff;
 */ 
+/* 
+--rich-black: #001219ff;
+--midnight-green: #005f73ff;
+--dark-cyan: #0a9396ff;
+--tiffany-blue: #94d2bdff;
+--vanilla: #f3dfc1ff ;
+--gamboge: #ee9b00ff;
+--alloy-orange: #ca6702ff;
+--rust: #bb3e03ff;
+--rufous: #ae2012ff;
+--auburn: #9b2226ff; */

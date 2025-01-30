@@ -6,6 +6,6 @@ colors:
 --dark-purple: #160f29ff;
 --caribbean-current: #246a73ff;
 --dark-cyan: #368f8bff;
---champagne: #f3dfc1ff;
---desert-sand: #ddbea8ff;
+--champagne: #f3dfc1ff ;
+--desert-sand: #001219ff;
 */ 

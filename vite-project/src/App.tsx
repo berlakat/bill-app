@@ -16,64 +16,13 @@ function App() {
       </div>
       <div className="header">
         <div className="logo">
-          <a href="b"><img src={b} alt="logo"/><h1>billify</h1></a><br />
-          Due now <br /> Paid
+          <a href="b"><img src={b} alt="logo"/><h1>billify</h1></a>
+          Whats due now? <br /> 
                   </div>
       </div>
        {/* Use the TabComponent here */}
        <TabComponent />
 
-      <div className="container">
-        <h2>Welcome to your portal! <br /> 
-
-        <div className="graph">
-          <div className="bar" style={{ height: '70%' }}></div>
-          <div className="bar" style={{ height: '50%' }}></div>
-          <div className="bar" style={{ height: '80%' }}></div>
-          <div className="bar" style={{ height: '40%' }}></div>
-        </div>
-
-        </h2>
-        <b>Due now</b>
-
-        <div className="checklist">
-          <ul>
-            <li className="task-item">
-              <div className="task-content">
-                <span className="task-name">Task 1</span>
-                <span className="task-price">$100.00</span>
-                <div className="task-caption">
-                  <span>Due Date: <b>January 30, 2025</b></span>
-                </div>
-              </div>
-              <button className="pay-now">Pay Now</button>
-            </li>
-
-            <li className="task-item">
-              <div className="task-content">
-                <span className="task-name">Task 2</span>
-                <span className="task-price">$200.00</span>
-                <div className="task-caption">
-                  <span>Due Date: <b>February 5, 2025</b></span>
-                </div>
-              </div>
-              <button className="pay-now">Pay Now</button>
-            </li>
-
-            <li className="task-item">
-              <div className="task-content">
-                <span className="task-name">Task 3</span>
-                <span className="task-price">$150.00</span>
-                <div className="task-caption">
-                  <span>Due Date: <b>February 10, 2025</b></span>
-                </div>
-              </div>
-              <button className="pay-now">Pay Now</button>
-            </li>
-
-          </ul>
-        </div>
-      </div>
 
 
       {/* <h1>illify</h1>
@@ -97,6 +46,6 @@ export default App
 --dark-purple: #160f29ff;
 --caribbean-current: #246a73ff;
 --dark-cyan: #368f8bff;
---champagne: #f3dfc1ff;
---desert-sand: #ddbea8ff;
+--champagne: #f3dfc1ff ;
+--desert-sand: #001219ff;
 */

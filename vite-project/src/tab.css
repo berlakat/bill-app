@@ -5,7 +5,7 @@
     align-items: flex-start;
     position: absolute; /* Position the tabs outside of the container */
     left: -200px; /* Move the tabs slightly outside of the container */
-    top:200px; /* Adjust top spacing */
+    top:300px; /* Adjust top spacing */
     padding-right: 20px; /* Add spacing on the right side */
   }
   
@@ -15,7 +15,7 @@
     margin-bottom: 5px;
     margin-top: 5%;
     border-radius: 10px;
-    background-color: #f3dfc1ff;  /* Same as container for unselected tab */
+    background-color: #f3dfc1ff ;  /* Same as container for unselected tab */
     color: #333;
     font-weight: bold;
     cursor: pointer;
@@ -25,10 +25,10 @@
   }
   
   .tab.selected {
-    background-color: #f3dfc1ff; /* Same as container */
+    background-color: #f3dfc1ff ; /* Same as container */
     transform: translateX(15px); /* Move the selected tab outwards */
-    width: 200px; /* Make the selected tab bigger */
-    z-index: 2; /* Bring selected tab in front of unselected one */
+    width: 180px; /* Make the selected tab bigger */
+    z-index: 1; /* Bring selected tab in front of unselected one */
   }
   
   .tab.unselected {
@@ -38,7 +38,7 @@
     z-index: 0; /* Place the unselected tab behind the container */
   }
   
-  .tab:hover {
+  .tab.tab.unselected:hover {
     background-color: #d1b198;  /* Light hover effect for tabs */
   }
   
@@ -47,7 +47,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-left: 180px; /* Ensure content is not covered by the tab container */
+    margin-left: 20px; /* Ensure content is not covered by the tab container */
     padding-left: 20px; /* Add padding to the content */
   }
   
@@ -56,14 +56,24 @@
     position: relative; /* Ensure that tab container can be positioned relative to this container */
     display: flex;
     flex-direction: column;
-    width: 75vw;
+    width: 74vw;
     height: fit-content;
     margin-left: 8%;
     margin-right: 5%;
     margin-top: 10%;
     padding: 20px;
     border-radius: 20px;
-    background-color: #f3dfc1ff;
+    background-color: #f3dfc1ff ;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
-  
+  /* 
+--rich-black: #001219ff;
+--midnight-green: #005f73ff;
+--dark-cyan: #0a9396ff;
+--tiffany-blue: #94d2bdff;
+--vanilla: #f3dfc1ff ;
+--gamboge: #ee9b00ff;
+--alloy-orange: #ca6702ff;
+--rust: #bb3e03ff;
+--rufous: #ae2012ff;
+--auburn: #9b2226ff; */

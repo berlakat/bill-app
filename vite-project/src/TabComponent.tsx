@@ -33,16 +33,23 @@ const TabComponent: React.FC = () => {
         {/* Conditionally render tab content based on the selectedTab state */}
         {selectedTab === 'tab1' && (
           <div id="tab1Content">
-        <h2>Welcome to your portal! <br /> 
+        <h1>Welcome to your portal! <br />  </h1>  All of your Bills. All together. <br />lets see whats on your plate this month:
 
         <div className="graph">
-          <div className="bar" style={{ height: '70%' }}></div>
-          <div className="bar" style={{ height: '50%' }}></div>
-          <div className="bar" style={{ height: '80%' }}></div>
-          <div className="bar" style={{ height: '40%' }}></div>
+          <div className="bar" style={{ height: '70%' }}>
+            <span className="bar-label">70%</span>
+          </div>
+          <div className="bar" style={{ height: '50%' }}>
+             <span className="bar-label">50%</span>
+          </div>
+          <div className="bar" style={{ height: '80%' }}>
+            <span className="bar-label">80%</span>
+          </div>
+          <div className="bar" style={{ height: '40%' }}>
+            <span className="bar-label">40%</span>
+          </div>
         </div>
 
-        </h2>
         <b>Due now</b>
 
         <div className="checklist">
